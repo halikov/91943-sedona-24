@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Микаил Халиков](https://up.htmlacademy.ru/htmlcss/24/user/91943).
-* Наставник: `Неизвестно`.
+* Наставник: [Магомед Кандаев](https://htmlacademy.ru/profile/magomedkandaev).
 
 ---
 
