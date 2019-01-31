@@ -276,21 +276,21 @@ input[type="radio"].visually-hidden {
   content: "";
   width: 75px;
   height: 72px;
-  background: url('../img/icon-1.svg') no-repeat 0 0;
+  background: url('../img/icon-house.svg') no-repeat 0 0;
 }
 
 .icon-eat {
   content: "";
   width: 74px;
   height: 70px;
-  background: url('../img/icon-3.svg') no-repeat 0 0;
+  background: url('../img/icon-burger.svg') no-repeat 0 0;
 }
 
 .icon-suvenir {
   content: "";
   width: 64px;
   height: 76px;
-  background: url('../img/icon-2.svg') no-repeat 0 0;
+  background: url('../img/icon-suvenir.svg') no-repeat 0 0;
 }
 
 .reason-icon {
@@ -374,5 +374,5 @@ form {
 
 .hotel-filter {
   width: 1200px;
-  background: url('../img/filter-background.jpg') no-repeat 0 center;
+  background: url('../img/filter-bg.jpg') no-repeat 0 center;
 }
