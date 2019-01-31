@@ -1,0 +1,378 @@
+body {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.main-header {
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-list {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list li {
+  width: 239px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.nav-list a {
+  display: inline-block;
+  margin: 0;
+  padding: 15px;
+  padding-bottom: 25px;
+  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.nav-list li:nth-child(2) {
+  margin-right: 53px;
+}
+
+.nav-list li:nth-child(3) {
+  margin-left: 53px;
+}
+
+.min-content {
+  display: flex;
+  flex-flow: wrap column;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-wrapper .social-list {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+  list-style: none;
+}
+
+.social-list a {
+  display: inline-block;
+  margin: 0;
+  margin-left: 10px;
+  padding: 15px;
+  background-color: #81b3d2;
+  vertical-align: middle;
+}
+
+.made-by {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+}
+
+.made-by svg {
+  max-width: 115px;
+  max-height: 41px;
+}
+
+.made-by path {
+  fill: #000000;
+}
+
+.hero {
+  position: relative;
+  top: -10px;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-content: center;
+  width: 1200px;
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.mountains-bg {
+  position: relative;
+  width: 1200px;
+  height: 555px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  z-index: -1;
+}
+
+.hero .bg-mask {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+
+.hero .welcome-img {
+  display: inline-block;
+  margin-top: 75px;
+}
+
+.hero-heading {
+  position: absolute;
+  bottom: -115px;
+  width: 440px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.hero-heading::before {
+  background: #ffffff url('../img/polygon.svg') no-repeat 0 0;
+}
+
+.five-reasons {
+  width: 490px;
+  margin: 0 auto;
+  margin-bottom: 55px;
+  padding: 0;
+  align-self: center;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.reasons-wrapper {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.reasons-block {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  margin: 0;
+  padding: 40px 60px;
+  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.reasons-block p {
+  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.reasons-block strong {
+  font-size: 21px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.block1,
+.block7 {
+  width: 400px;
+  color: #ffffff;
+  background-color: #81b3d2;
+  box-sizing: border-box;
+}
+
+.block1 h3,
+.block7 h3 {
+  width: 200px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+}
+
+.block1 p,
+.block7 p {
+  color: #ffffff;
+}
+
+.block2,
+.block6 {
+  width: 800px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.icon-house {
+  content: "";
+  width: 75px;
+  height: 72px;
+  background: url('../img/icon-1.svg') no-repeat 0 0;
+}
+
+.icon-eat {
+  content: "";
+  width: 74px;
+  height: 70px;
+  background: url('../img/icon-3.svg') no-repeat 0 0;
+}
+
+.icon-suvenir {
+  content: "";
+  width: 64px;
+  height: 76px;
+  background: url('../img/icon-2.svg') no-repeat 0 0;
+}
+
+.reason-icon {
+  margin-bottom: 30px;
+}
+
+.block8,
+.block9,
+.block10 {
+  background-color: #eeeeee;
+}
+
+.block8 strong,
+.block9 strong,
+.block10 strong {
+  display: block;
+  width: 160px;
+}
+
+.search-hotels {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 55px;
+}
+
+.search-hotels strong {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.search-hotels p {
+  display: block;
+  width: 434px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.search-hotels p:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.search-hotels h3 {
+  width: 568px;
+  margin-top: 50px;
+  margin: 0 auto;
+  padding: 30px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #766357;
+  box-sizing: border-box;
+}
+
+form {
+  position: absolute;
+  top: 255px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 568px;
+  display: flex;
+  flex-flow: wrap column;
+}
+
+.hotel-filter {
+  width: 1200px;
+  background: url('../img/filter-background.jpg') no-repeat 0 center;
+}
