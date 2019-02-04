@@ -684,6 +684,7 @@ label {
 }
 
 .sorting-list {
+  flex-grow: 1;
   display: flex;
   flex-flow: wrap row;
   margin: 0;
@@ -714,6 +715,41 @@ label {
 
 .sorting-list .active {
   border: none;
+}
+
+.sorting-arrow {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sorting-arrow li {
+  margin-left: 10px;
+}
+
+.sorting-arrow a {
+  cursor: pointer;
+}
+
+.arrow-up path,
+.arrow-down path {
+  fill: #cacaca;
+}
+
+.arrow-up:hover path,
+.arrow-down:hover path,
+.arrow-up:focus path,
+.arrow-down:focus path {
+  fill: #000000;
+}
+
+.arrow-up:active path,
+.arrow-down:active path {
+  fill: #81b3d2;
 }
 
 .hotel-container {
