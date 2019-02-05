@@ -9,6 +9,7 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+    <div class="wrapper">
 
     <header class="main-header">
       <div class="layout-positioner">
@@ -33,56 +34,61 @@
         </nav>
       </div>
     </header>
-    <section class="hotel-filer">
-      <h2>Фильтр отелей в Седоне</h2>
+    <section class="hotel-filter">
+      <h2 class="visually-hidden">Фильтр отелей в Седоне</h2>
       <form action="" method="POST" class="filter-form">
-        <fieldset class="infrastructure">
-          <legend>Инфраструктура:</legend>
-          <label for="pool">
-            <input type="checkbox" id="pool" name="pool" checked>
-            Бассейн
-          </label>
-          <label for="parking">
-            <input type="checkbox" id="parking" name="parking">
-            Парковка
-          </label>
-          <label for="wifi">
-            <input type="checkbox" id="wifi" name="wifi">
-            wi-fi
-          </label>
-        </fieldset>
-        <fieldset class="housing">
-          <legend>Тип жилья:</legend>
-          <label for="hotel">
-            <input type="checkbox" id="hotel" name="hotel" checked>
-            Гостиница
-          </label>
-          <label for="motel">
-            <input type="checkbox" id="motel" name="motel" checked>
-            Мотель
-          </label>
-          <label for="appartments">
-            <input type="checkbox" id="appartments" name="appartments" checked>
-            Апартаменты
-          </label>
-        </fieldset>
-        <fieldset class="price">
-          <legend>Стоимость в сутки (Р):</legend>
-          <div class="price-range">
-            <div class="price-controls">
-              <input class="min-price" type="text" name="min-price" value="0">
-              <input class="max-price" type="text" name="max-price" value="3000">
-            </div>
-            <div class="range-container">
-              <div class="scale">
-                <div class="bar"></div>
+        <div class="filter-left-col">
+          <fieldset class="infrastructure">
+            <legend>Инфраструктура:</legend>
+            <p>
+              <input class="visually-hidden" type="checkbox" id="pool" name="pool" checked>
+              <label class="checkbox-label" for="pool">Бассейн</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="checkbox" id="parking" name="parking">
+              <label class="checkbox-label" for="parking">Парковка</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="checkbox" id="wifi" name="wifi">
+              <label class="checkbox-label" for="wifi">wi-fi</label>
+            </p>
+          </fieldset>
+          <fieldset class="housing">
+            <legend>Тип жилья:</legend>
+            <p>
+              <input class="visually-hidden" type="checkbox" id="hotel" name="hotel" checked>
+              <label class="checkbox-label" for="hotel">Гостиница</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="checkbox" id="motel" name="motel" disabled>
+              <label class="checkbox-label" for="motel">Мотель</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="checkbox" id="appartments" name="appartments" checked>
+              <label class="checkbox-label" for="appartments">Апартаменты</label>
+            </p>
+          </fieldset>
+        </div>
+        <div class="filter-right-col">
+          <fieldset class="price">
+            <legend>Стоимость в сутки (Р):</legend>
+            <div class="price-range">
+              <div class="price-controls">
+                <input class="min-price" type="text" name="min-price" value="0">
+                <span class="divider"></span>
+                <input class="max-price" type="text" name="max-price" value="3000">
               </div>
-              <div class="toggle toggle-min"></div>
-              <div class="toggle toggle-max"></div>
+              <div class="range-container">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
             </div>
-          </div>
-        </fieldset>
-        <button type="submit">Показать</button>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </div>
       </form>
     </section>
 
@@ -124,131 +130,131 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="hotel-container">
-        <img src="img/hotel-amara.jpg" width="135" height="90" alt="Amara resort & spa">
-        <div class="hotel-description">
-          <a class="hotel-name" href="#"><h3>Amara Resort & SPA</h3></a>
-          <div class="housing-price">
-            <span class="housing-type">Гостиница</span>
-            <span class="price-start">от 4000 Р.</span>
+        <div class="hotel-container">
+          <img src="img/hotel-amara.jpg" width="135" height="90" alt="Amara resort & spa">
+          <div class="hotel-description">
+            <a class="hotel-name" href="#"><h3>Amara Resort & SPA</h3></a>
+            <div class="housing-price">
+              <span class="housing-type">Гостиница</span>
+              <span class="price-start">от 4000 Р.</span>
+            </div>
+            <div class="hotel-description-buttons">
+              <a href="#" class="read-more">Подробнее</a>
+              <a href="#" class="reserve">Забронировать</a>
+            </div>
           </div>
-          <div class="hotel-description-buttons">
-            <a href="#" class="read-more">Подробнее</a>
-            <a href="#" class="reserve">Забронировать</a>
-          </div>
-        </div>
-        <div class="hotel-rating">
-          <div class="stars-container">
-            <span class="star"></span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
-              <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-                0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
-              <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-                0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
-              <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-                0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
-              <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-                0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
-          </div>
-          <p class="rating">Рейтинг: 8.5</p>
-        </div>
-      </div>
-      <div class="hotel-container">
-        <img src="img/hotel-desert.jpg" width="135" height="90" alt="Desert Quail Inn">
-        <div class="hotel-description">
-          <a class="hotel-name" href="#"><h3>Desert Quail Inn</h3></a>
-          <div class="housing-price">
-            <span class="housing-type">Мотель</span>
-            <span class="price-start">от 3000 Р.</span>
-          </div>
-          <div class="hotel-description-buttons">
-            <a href="#" class="read-more">Подробнее</a>
-            <a href="#" class="reserve">Забронировать</a>
-          </div>
-        </div>
-        <div class="hotel-rating">
-          <div class="stars-container">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
-              <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-                0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
-              <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-                0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
-              <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-                0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
-          </div>
-          <p class="rating">Рейтинг: 8.9</p>
-        </div>
-      </div>
-      <div class="hotel-container">
-        <img src="img/hotel-willas.jpg" width="135" height="90" alt="Willas at Poco Diablo">
-        <div class="hotel-description">
-          <a class="hotel-name" href="#"><h3>Willas at Poco Diablo</h3></a>
-          <div class="housing-price">
-            <span class="housing-type">Апартаменты</span>
-            <span class="price-start">от 2000 Р.</span>
-          </div>
-          <div class="hotel-description-buttons">
-            <a href="#" class="read-more">Подробнее</a>
-            <a href="#" class="reserve">Забронировать</a>
-          </div>
-        </div>
-        <div class="hotel-rating">
-          <div class="stars-container">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+          <div class="hotel-rating">
+            <div class="stars-container">
+              <span class="star"></span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
                 <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-               0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
-            <span class="star">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                  0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
                 <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
-               0,6.494 6.878,6.494 "/>
-              </svg>
-            </span>
+                  0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
+                  0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
+                  0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+            </div>
+            <p class="rating">Рейтинг: 8.5</p>
           </div>
-          <p class="rating">Рейтинг: 9.2</p>
+        </div>
+        <div class="hotel-container">
+          <img src="img/hotel-desert.jpg" width="135" height="90" alt="Desert Quail Inn">
+          <div class="hotel-description">
+            <a class="hotel-name" href="#"><h3>Desert Quail Inn</h3></a>
+            <div class="housing-price">
+              <span class="housing-type">Мотель</span>
+              <span class="price-start">от 3000 Р.</span>
+            </div>
+            <div class="hotel-description-buttons">
+              <a href="#" class="read-more">Подробнее</a>
+              <a href="#" class="reserve">Забронировать</a>
+            </div>
+          </div>
+          <div class="hotel-rating">
+            <div class="stars-container">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
+                  0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
+                  0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
+                  0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+            </div>
+            <p class="rating">Рейтинг: 8.9</p>
+          </div>
+        </div>
+        <div class="hotel-container">
+          <img src="img/hotel-willas.jpg" width="135" height="90" alt="Willas at Poco Diablo">
+          <div class="hotel-description">
+            <a class="hotel-name" href="#"><h3>Willas at Poco Diablo</h3></a>
+            <div class="housing-price">
+              <span class="housing-type">Апартаменты</span>
+              <span class="price-start">от 2000 Р.</span>
+            </div>
+            <div class="hotel-description-buttons">
+              <a href="#" class="read-more">Подробнее</a>
+              <a href="#" class="reserve">Забронировать</a>
+            </div>
+          </div>
+          <div class="hotel-rating">
+            <div class="stars-container">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                  <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
+                0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+              <span class="star">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                  <polygon fill="#81B3D2" points="9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506
+                0,6.494 6.878,6.494 "/>
+                </svg>
+              </span>
+            </div>
+            <p class="rating">Рейтинг: 9.2</p>
+          </div>
         </div>
       </div>
     </section>
@@ -293,5 +299,7 @@
         </div>
       </div>
     </footer>
+
+    </div>
   </body>
 </html>
