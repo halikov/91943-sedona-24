@@ -111,6 +111,19 @@ input[type="radio"].visually-hidden {
   padding-right: 70px;
 }
 
+.nav-list a:not([href]) {
+  color: #766357;
+}
+
+.nav-list a[href]:hover,
+.nav-list a[href]:focus {
+  color: #81b3d2;
+}
+
+.nav-list a[href]:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .min-content {
   display: flex;
   flex-flow: wrap column;
@@ -487,12 +500,22 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form-show {
-  /* display: none; */
+  display: none;
   transition: all 0.3s;
 }
 
 .btn-hotel-search:hover .search-form-show {
   display: block;
+}
+
+.map {
+  position: relative;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 label {
@@ -813,7 +836,7 @@ input[type="checkbox"]:disabled + label:before {
   background-color: #ffffff;
 }
 
-.filter-form button {
+.filter-form button[type="submit"] {
   width: 138px;
   padding: 5px 10px;
   font-size: 14px;
@@ -826,6 +849,16 @@ input[type="checkbox"]:disabled + label:before {
   border: 2px solid #ffffff;
   background: transparent;
   box-sizing: border-box;
+}
+
+.filter-form button[type="submit"]:hover,
+.filter-form button[type="submit"]:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.filter-form button[type="submit"]:focus {
+  outline: thin dotted;
 }
 
 .range-container {
@@ -853,15 +886,16 @@ input[type="checkbox"]:disabled + label:before {
 .range-container .toggle {
   position: absolute;
   top: -9px;
-  left: 0;
+  left: -10px;
   content: "";
   width: 20px;
   height: 20px;
-  background: url('../img/filter-button.svg') no-repeat 0 0;
+  border: none;
+  background: none;
 }
 
 .range-container .toggle-max {
-  left: 70%;
+  left: 65%;
 }
 
 .sorting-container {
@@ -964,15 +998,20 @@ input[type="checkbox"]:disabled + label:before {
   fill: #cacaca;
 }
 
-.arrow-up:hover path,
-.arrow-down:hover path,
-.arrow-up:focus path,
-.arrow-down:focus path {
+.arrow-down:not([href]) path,
+.arrow-up:not([href]) path {
+  fill: #81b3d2;
+}
+
+.arrow-up[href]:hover path,
+.arrow-down[href]:hover path,
+.arrow-up[href]:focus path,
+.arrow-down[href]:focus path {
   fill: #000000;
 }
 
-.arrow-up:active path,
-.arrow-down:active path {
+.arrow-up[href]:active path,
+.arrow-down[href]:active path {
   fill: #81b3d2;
 }
 
@@ -1023,11 +1062,11 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .hotel-name:active h3 {
-  color: #b2b2b2;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .housing-price {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -1087,7 +1126,7 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .stars-container {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .hotel-container .rating {
