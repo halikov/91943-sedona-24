@@ -9,10 +9,8 @@ var child = feedback.querySelector('[name="child"]');
 feedbackBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
     if(feedback.classList.contains('search-form-hide')) {
-      evt.preventDefault(evt);
       feedback.classList.remove('search-form-hide');
     } else {
-      evt.preventDefault(evt);
       feedback.classList.add('search-form-hide');
     }
 });
