@@ -860,7 +860,7 @@ label[for="child"] {
 
 .filter-right-col {
   display: flex;
-  flex-direction: column;
+  flex-flow: nowrap column;
   justify-content: space-between;
   align-items: center;
 }
