@@ -236,11 +236,11 @@ input[type="radio"].visually-hidden {
 
 .hero {
   position: relative;
-  display: flex;
+  /* display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 1200px;
   margin: 0;
   margin-bottom: 94px;
@@ -262,6 +262,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: -80px;
   left: 0;
+  width: 1200px;
   z-index: -1;
 }
 
