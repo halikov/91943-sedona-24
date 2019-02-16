@@ -1,7 +1,7 @@
 body {
   width: 1200px;
   margin: 0 auto;
-  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -57,7 +57,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-flow: wrap row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -76,7 +76,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 14px 10px;
   padding-bottom: 25px;
-  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -107,9 +107,10 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.min-content {
+.main-content {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .footer {
@@ -135,7 +136,7 @@ input[type="radio"].visually-hidden {
   width: 400px;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -203,7 +204,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-right: 8px;
   padding: 0;
-  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
@@ -331,7 +332,7 @@ input[type="radio"].visually-hidden {
   width: 400px;
   margin: 0;
   padding: 50px 45px 40px 45px;
-  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -349,7 +350,7 @@ input[type="radio"].visually-hidden {
   max-width: 315px;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
@@ -1094,7 +1095,7 @@ input[type="checkbox"]:disabled + label:before {
 
 .sorting-container p {
   margin-right: 50px;
-  font-family: 'PT Sans', 'Open Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -1302,6 +1303,11 @@ input[type="checkbox"]:disabled + label:before {
 .hotel-description-buttons .reserve:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
+}
+
+.hotel-description-buttons .read-more:focus,
+.hotel-description-buttons .reserve:focus {
+  outline: thin dotted;
 }
 
 /* .hotel-rating {
