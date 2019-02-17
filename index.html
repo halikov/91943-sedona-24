@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -108,7 +108,7 @@
                 <form class="search-form " action="mailto:mail@sedona.ru" method="POST">
                   <p class="entrance-container">
                     <label for="entrance">Дата заезда:</label>
-                    <input class="entrance" type="text" value="24 апреля 2017" id="entrance" name="entrance">
+                    <input class="entrance" type="text" value="" id="entrance" name="entrance" placeholder="24 июня 2019">
                     <button class="calendar" type="button" aria-label="Кнопка календаря">
                       <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                         <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"></path>
@@ -118,7 +118,7 @@
                   </p>
                   <p class="departure-container">
                     <label for="departure">Дата выезда:</label>
-                    <input class="departure" type="text" value="4 июля 2017" id="departure" name="departure">
+                    <input class="departure" type="text" value="" id="departure" name="departure" placeholder="4 июля 2019">
                     <button class="calendar" type="button" aria-label="Кнопка календаря">
                       <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                         <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"></path>
@@ -130,14 +130,14 @@
                     <label for="adult">Взрослые:</label>
                     <span class="adult-count">
                       <button class="btn-minus" type="button" aria-label="меньше"></button>
-                      <input type="text" id="adult" name="adult" value="2">
+                      <input type="text" id="adult" name="adult" value="" placeholder="0">
                       <button class="btn-plus" type="button" aria-label="больше"></button>
                     </span>
 
                     <label for="child">Дети:</label>
                     <span class="child-count">
                       <button class="btn-minus" type="button" aria-label="меньше"></button>
-                      <input type="text" id="child" name="child" value="0">
+                      <input type="text" id="child" name="child" value="" placeholder="0">
                       <button class="btn-plus" type="button" aria-label="больше"></button>
                     </span>
                   </p>
