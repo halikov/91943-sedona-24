@@ -1,25 +1,68 @@
-var feedbackBtn = document.querySelector('.btn-hotel-search');
-var feedback = document.querySelector('.search-form');
-var entrance = feedback.querySelector('[name="entrance"]');
-var departure = feedback.querySelector('[name="departure"]');
-var adult = feedback.querySelector('[name="adult"]');
-var child = feedback.querySelector('[name="child"]');
+var searchFormBtn = document.querySelector('.btn-hotel-search');
+var searchForm = document.querySelector('.search-form');
+var entrance = searchForm.querySelector('[name="entrance"]');
+var departure = searchForm.querySelector('[name="departure"]');
+var adult = searchForm.querySelector('[name="adult"]');
+var child = searchForm.querySelector('[name="child"]');
+var btnSearch = searchForm.querySelector('[type="submit"]')
 
+var isStorage = true;
+var storageEntrance = '';
+var storageDeparture = '';
+var storageAdult = ''
+var storageChild = ''
 
-feedbackBtn.addEventListener('click', function(evt) {
+try {
+  storageEntrance = localStorage.getItem('entrance');
+  storageDeparture = localStorage.getItem('departure');
+  storageAdult = localStorage.getItem('adult');
+} catch(err) {
+  isStorageSupport = false;
+}
+
+searchFormBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
-    if(feedback.classList.contains('search-form-hide')) {
-      feedback.classList.remove('search-form-hide');
+    if(searchForm.classList.contains('search-form-hide')) {
+      searchForm.classList.remove('search-form-hide');
+      entrance.focus();
+      if(storageEntrance) {
+        entrance.value = storageEntrance;
+        departure.focus();
+      } else if(storageDeparture) {
+        departure.value = storageDeparture;
+        adult.focus();
+      } else if(storageAdult) {
+        adult.value = storageAdult;
+        child.focus();
+      } else if(storageChild) {
+        child.value = storageChild;
+      } else {
+        entrance.focus();
+      }
     } else {
-      feedback.classList.add('search-form-hide');
+      searchForm.classList.remove('search-form-error');
+      searchForm.classList.add('search-form-hide');
     }
 });
 
-feedback.addEventListener('submit', function(evt) {
-  if(!departure || !entrance || !adult || !child) {
+searchForm.addEventListener('submit', function(evt) {
+  if(!entrance.value || !departure.value || !adult.value) {
     evt.preventDefault();
     console.log('Нужно ввести даты въезда выезда и количество гостей!');
-    feedback.classList.add('feedback-error');
+    searchForm.classList.remove('search-form-error');
+    searchForm.offsetWidth = searchForm.offsetWidth;
+    searchForm.classList.add('search-form-error');
+  } else {
+    if(isStorageSupport) {
+      localStorage.setItem('entrance', entrance.value);
+    }
   }
 });
 
+window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      searchForm.classList.remove('search-form-error');
+      searchForm.classList.add('search-form-hide');
+    }
+  });
