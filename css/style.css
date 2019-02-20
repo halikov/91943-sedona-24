@@ -244,7 +244,7 @@ input[type="radio"].visually-hidden {
   align-items: center;
   width: 1200px;
   margin: 0;
-  margin-bottom: 94px;
+  margin-bottom: 40px;
   padding: 0;
   text-align: center;
   box-sizing: border-box;
@@ -282,13 +282,12 @@ input[type="radio"].visually-hidden {
 }
 
 .hero-heading {
-  position: absolute;
+  /* position: absolute;
   bottom: -115px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   width: 440px;
   margin: 0;
-  margin-bottom: 50px;
   padding: 0;
   font-size: 21px;
   line-height: 26px;
@@ -320,7 +319,6 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
 }
 
 .reasons-block {
@@ -331,7 +329,7 @@ input[type="radio"].visually-hidden {
   align-items: center;
   width: 400px;
   margin: 0;
-  padding: 50px 45px 40px 45px;
+  padding: 45px 45px 45px 45px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -367,7 +365,7 @@ input[type="radio"].visually-hidden {
 .block1,
 .block7 {
   width: 400px;
-  height: 255px;
+  /* height: 255px; */
   color: #ffffff;
   background-color: #81b3d2;
   box-sizing: border-box;
@@ -527,7 +525,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  padding-top: 48px;
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -535,7 +533,6 @@ input[type="radio"].visually-hidden {
   position: relative;
   z-index: 2;
   margin: 0;
-  margin-bottom: 48px;
   padding: 0;
   font-size: 14px;
   line-height: 24px;
@@ -548,8 +545,10 @@ input[type="radio"].visually-hidden {
 .search-hotels .question-text {
   width: 636px;
   margin: 0;
+  margin-top: 30px;
   margin-bottom: 25px;
   padding: 0;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -601,7 +600,7 @@ input[type="radio"].visually-hidden {
 
 .search-form {
   position: absolute;
-  top: 291px;
+  top: 85px;
   left: 50%;
   z-index: 1;
   transform: translateX(-50%);
@@ -1203,10 +1202,9 @@ input[type="checkbox"]:disabled + label:before {
 
 .hotel-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
   padding: 0 70px 30px 70px;
   margin-bottom: 30px;
   border-bottom: 1px solid #e5e5e5;
@@ -1214,19 +1212,20 @@ input[type="checkbox"]:disabled + label:before {
 
 .hotel-container img {
   width: 135px;
-  height: 90px;
+  height: auto;
   margin-right: 30px;
 }
 
 .hotel-description {
   flex-grow: 1;
-  /* display: flex;
+  display: flex;
   flex-flow: wrap column;
   justify-content: flex-start;
-  align-items: flex-start; */
+  align-items: flex-start;
 }
 
 .hotel-name {
+  max-width: 565px;
   margin: 0;
   padding: 0;
 }
@@ -1253,7 +1252,7 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .housing-price {
-  margin-bottom: 17px;
+  margin-bottom: 5px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -1266,6 +1265,7 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .hotel-description-buttons {
+  max-width: 565px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
@@ -1273,6 +1273,9 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .hotel-description-buttons .read-more {
+  display: inline-block;
+  max-width: 260px;
+  margin-top: 10px;
   margin-right: 3px;
   padding: 5px 18px;
   color: #ffffff;
@@ -1290,6 +1293,9 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .hotel-description-buttons .reserve {
+  display: inline-block;
+  max-width: 260px;
+  margin-top: 10px;
   padding: 5px 16px;
   color: #ffffff;
   background-color: #766357;
@@ -1310,12 +1316,10 @@ input[type="checkbox"]:disabled + label:before {
   outline: thin dotted;
 }
 
-/* .hotel-rating {
+.hotel-rating {
   display: flex;
-  flex-flow: wrap column;
-  justify-content: space-between;
-  align-items: flex-start;
-} */
+  flex-direction: column;
+}
 
 .stars-container {
   margin-bottom: 37px;
